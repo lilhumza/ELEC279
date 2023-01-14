@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class WorkHourApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in); //Create Scanner instance
+		
+		int hoursPerDay = 0, numDays = 0;
+		
+		System.out.println("Please enter the number of hours per day: ");
+		hoursPerDay = input.nextInt();
+		
+		System.out.println("Please enter the number of days: ");
+		numDays = input.nextInt();
+		
+		input.close();
+		
+		for (int i = 0; i < numDays; i++) {
+			System.out.println("Day "+i+" Total Hours Worked = " +i*hoursPerDay);
+		}
+		
+		
+		
+
+	}
+
+}

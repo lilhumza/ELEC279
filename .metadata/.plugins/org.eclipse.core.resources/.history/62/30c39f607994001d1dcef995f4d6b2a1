@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class TaskInputOutput {
+
+	public int num1, num2, prod, sum;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		TaskInputOutput arithmObj = new TaskInputOutput();
+		
+		System.out.println("Please enter an Integer: ");
+		arithmObj.num1 = input.nextInt();
+		
+		System.out.println("Please enter an Integer: ");
+		arithmObj.num2 = input.nextInt();
+		
+		arithmObj.prod = arithmObj.num1 * arithmObj.num2;
+		arithmObj.sum = arithmObj.num1 + arithmObj.num2;
+	}
+
+}
