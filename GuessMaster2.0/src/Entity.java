@@ -1,0 +1,52 @@
+//package GuessMaster2.0;
+
+public abstract class Entity {
+	private String name;
+	private Date born;
+	private double difficulty;
+	
+	public Entity(String name, Date birthDate, double difficulty) {
+		this.name = name;
+		this.born = new Date(birthDate); //no privacy leak
+		this.difficulty = difficulty;
+	}
+	
+	public Entity(Entity entity) {
+		this.name = entity.name;
+		this.born = new Date(entity.born); //no privacy leak
+		this.difficulty = entity.difficulty;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Date getBorn() {
+		return new Date(born);
+	}
+	
+	public String toString() {
+		return "Name: "+name+"\n"+"Born at: "+born.toString()+"\n";
+	}
+	
+    public boolean equals(Entity otherEntity){ //Comparison between entities
+        return (name.equals(otherEntity.name) && born.equals(otherEntity.born));
+    }
+    
+    public int getAwardedTicketNumber() { //Method to calculate ticket numbers
+    	return (int)(this.difficulty * 100); //Cast double to int after multiplication
+    }
+    
+    public abstract String entityType(); //Abstract method return type of String
+    
+    public abstract Entity clone(); //Abstract method return type of Entity
+    
+    public String welcomeMessage() {
+    	return "Welcome! Let's start the game! This entity is a "+entityType()+"!";
+    }
+    
+    public String closingMessage() {
+    	return "Congratudations! The detailed information of the entity you guessed is:\n"+toString();
+    }
+    
+}
