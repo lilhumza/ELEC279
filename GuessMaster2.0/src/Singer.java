@@ -1,4 +1,4 @@
-
+//Humza Khokhar - 20HAK10 - 20290176
 public class Singer extends Person {
 	private String debutAlbum;
 	private Date debutAlbumReleaseDate;

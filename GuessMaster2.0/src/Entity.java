@@ -1,5 +1,4 @@
-//package GuessMaster2.0;
-
+//Humza Khokhar - 20HAK10 - 20290176
 public abstract class Entity {
 	private String name;
 	private Date born;
@@ -42,7 +41,7 @@ public abstract class Entity {
     public abstract Entity clone(); //Abstract method return type of Entity
     
     public String welcomeMessage() {
-    	return "Welcome! Let's start the game! This entity is a "+entityType()+"!";
+    	return "\nWelcome! Let's start the game! This entity is a "+entityType()+"!";
     }
     
     public String closingMessage() {

@@ -1,5 +1,4 @@
-//package GuessMaster2.0; 
-
+//Humza Khokhar - 20HAK10 - 20290176
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,7 +14,16 @@ public class GuessMaster{
 	}
 
 	public void addEntity(Entity entity) {
-		entities[numOfEntities++] = new Entity(entity);
+		Entity[] tempEntity = new Entity[numOfEntities]; //Create a tempEntity array that always has capacity numberOfEntities - 1 with each progressive call to the function
+        for (int i = 0; i < numOfEntities; i++) { //Loop through all indices
+        	tempEntity[i] = entities[i]; //Set the tempEntity array to entities at each index
+        }
+        
+        entities = new Entity[++numOfEntities]; //Redeclare entities as a new Entity array with capacity 1 + numberOfEntities preincremented to accommodate the new entity entry
+        for (int i = 0; i < numOfEntities-1; i++) { //Loop through the indices of the new array and copy all elements from the tempEntity array
+           entities[i] = tempEntity[i];
+        }
+        this.entities[numOfEntities-1] = entity; //Assign the last index of the new array to be entity passed from function
 	}
 	
 	public void playGame(int entityId) {
@@ -53,9 +61,11 @@ public class GuessMaster{
 //					System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 				System.out.println("*************Bingo!***************\n");
 				System.out.println("You won "+entity.getAwardedTicketNumber()+" tickets in this round.");
-				System.out.println("The total number of your tickets is" +ticketNum+".");
+				System.out.println("The total number of your tickets is " +ticketNum+".");
 				System.out.println("**********************************\n");
 				System.out.println(entity.closingMessage());
+				
+				playGame();
 				//break;
 			}
 		}

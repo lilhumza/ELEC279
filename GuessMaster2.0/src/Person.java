@@ -1,4 +1,4 @@
-
+//Humza Khokhar - 20HAK10 - 20290176
 public class Person extends Entity{
 	private String gender;
 	
@@ -25,7 +25,7 @@ public class Person extends Entity{
 	
 	@Override
 	public String toString() { //toString with Override
-		return super.toString() + "\nGender: "+this.gender; 
+		return super.toString() + "Gender: "+this.gender; 
 	}
 
 	@Override
