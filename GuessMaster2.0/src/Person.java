@@ -1,5 +1,5 @@
 //Humza Khokhar - 20HAK10 - 20290176
-public class Person extends Entity{
+public class Person extends Entity {
 	private String gender;
 	
 	public Person(String name, Date birthDate, String gender, double difficulty) { //Copy Constructor

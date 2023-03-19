@@ -16,15 +16,15 @@ public abstract class Entity {
 		this.difficulty = entity.difficulty;
 	}
 
-	public String getName() {
+	public String getName() { //Get name
 		return name;
 	}
 
-	public Date getBorn() {
+	public Date getBorn() { //Get date of birth
 		return new Date(born);
 	}
 	
-	public String toString() {
+	public String toString() { //Preliminary toString statement
 		return "Name: "+name+"\n"+"Born at: "+born.toString()+"\n";
 	}
 	
@@ -40,11 +40,11 @@ public abstract class Entity {
     
     public abstract Entity clone(); //Abstract method return type of Entity
     
-    public String welcomeMessage() {
+    public String welcomeMessage() { //Welcome Message Prompt
     	return "\nWelcome! Let's start the game! This entity is a "+entityType()+"!";
     }
     
-    public String closingMessage() {
+    public String closingMessage() { //User wins guess Prompt
     	return "Congratudations! The detailed information of the entity you guessed is:\n"+toString();
     }
     

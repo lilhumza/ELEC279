@@ -1,17 +1,17 @@
-
-public class Politician extends Person{
+//Humza Khokhar - 20HAK10 - 20290176
+public class Politician extends Person {
 	private String party;
 	
-	public Politician(String name, Date birthDate, String gender, String party, double difficulty) {
+	public Politician(String name, Date birthDate, String gender, String party, double difficulty) { //Copy Constructor
 		super(name, birthDate, gender, difficulty);
 		this.setParty(party);
 	}
 	
-	public String getParty() {
+	public String getParty() { //Get Party Name
 		return party;
 	}
 
-	public void setParty(String party) {
+	public void setParty(String party) { //Set Party Name
 		this.party = party;
 	}
 
